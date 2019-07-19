@@ -79,6 +79,6 @@ def evaluate_one_image(image_array):
 if __name__ == '__main__':
     train_dir = 'inputdata'
     train, train_label, val, val_label = get_files(train_dir, 0.3)
-    # 通过改变参数train or val，进而验证训练集或测试集
+    # 通过改变参数train or val，进而验证训练集或测试集,进行测试
     img = get_one_image(val)
     evaluate_one_image(img)
