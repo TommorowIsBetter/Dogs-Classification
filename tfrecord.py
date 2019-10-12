@@ -11,7 +11,7 @@ import os
 import tensorflow as tf
 from PIL import Image
 # 原始图片的存储位置
-orig_picture = 'generate_sample/'
+orig_picture = 'generateSample/'
 # 生成图片的存储位置
 gen_picture = 'trainData/'
 # 需要的识别类型
