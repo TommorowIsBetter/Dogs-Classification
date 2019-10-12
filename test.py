@@ -12,6 +12,8 @@ import matplotlib.pyplot as plt
 import model
 from input_data import get_files
 
+test_dir = 'testData'
+
 
 # 获取一张图片
 def get_one_image(train):
@@ -47,7 +49,7 @@ def evaluate_one_image(image_array):
         x = tf.placeholder(tf.float32, shape=[64, 64, 3])
 
         # you need to change the directories to yours.
-        logs_train_dir = 'logs/'
+        logs_train_dir = 'modelFile/'
 
         saver = tf.train.Saver()
 
@@ -77,8 +79,7 @@ def evaluate_one_image(image_array):
 # ------------------------------------------------------------------------
 
 if __name__ == '__main__':
-    train_dir = 'inputdata'
-    train, train_label, val, val_label = get_files(train_dir, 0.3)
+    train, train_label, val, val_label = get_files(test_dir, 0.5)
     # 通过改变参数train or val，进而验证训练集或测试集,进行测试
     img = get_one_image(val)
     evaluate_one_image(img)
