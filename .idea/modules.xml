@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/ThinkTimeTensorflow.iml" filepath="$PROJECT_DIR$/.idea/ThinkTimeTensorflow.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Dogs-Classification.iml" filepath="$PROJECT_DIR$/.idea/Dogs-Classification.iml" />
     </modules>
   </component>
 </project>

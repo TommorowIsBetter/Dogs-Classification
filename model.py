@@ -89,7 +89,7 @@ def inference(images, batch_size, n_classes):
                              name='biases', dtype=tf.float32)
 
         softmax_linear = tf.add(tf.matmul(local4, weights), biases, name='softmax_linear')
-
+        print(softmax_linear)
     return softmax_linear
 
 

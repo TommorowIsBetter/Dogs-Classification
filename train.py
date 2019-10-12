@@ -11,6 +11,7 @@ import numpy as np
 import tensorflow as tf
 import input_data
 import model
+import shutil
 # 变量声明
 N_CLASSES = 4  # husky,jiwawa,poodle,qiutian
 IMG_W = 64  # resize图像，太大的话训练时间久
@@ -22,9 +23,9 @@ learning_rate = 0.0001  # 一般小于0.0001
 
 # 获取批次batch
 train_dir = 'inputdata'  # 训练样本的读入路径
-logs_train_dir = 'inputdata'  # logs存储路径
-# logs_test_dir =  'E:/Re_train/image_data/test'        #logs存储路径
-
+logs_train_dir = 'logs'  # logs存储路径
+if os.path.exists(logs_train_dir):
+    shutil.rmtree(logs_train_dir)
 # train, train_label = input_data.get_files(train_dir)
 train, train_label, val, val_label = input_data.get_files(train_dir, 0.3)
 # 训练数据及标签

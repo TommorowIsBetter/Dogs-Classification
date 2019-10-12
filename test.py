@@ -47,7 +47,7 @@ def evaluate_one_image(image_array):
         x = tf.placeholder(tf.float32, shape=[64, 64, 3])
 
         # you need to change the directories to yours.
-        logs_train_dir = 'inputdata/'
+        logs_train_dir = 'logs/'
 
         saver = tf.train.Saver()
 
