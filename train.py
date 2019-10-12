@@ -16,14 +16,14 @@ import shutil
 N_CLASSES = 4  # husky,jiwawa,poodle,qiutian
 IMG_W = 64  # resize图像，太大的话训练时间久
 IMG_H = 64
-BATCH_SIZE = 20
+BATCH_SIZE = 4
 CAPACITY = 200
-MAX_STEP = 200  # 一般大于10K
+MAX_STEP = 1000  # 一般大于10K
 learning_rate = 0.0001  # 一般小于0.0001
 
 # 获取批次batch
-train_dir = 'inputdata'  # 训练样本的读入路径
-logs_train_dir = 'logs'  # logs存储路径
+train_dir = 'trainData'  # 训练样本的读入路径
+logs_train_dir = 'modelFile'  # logs存储路径
 if os.path.exists(logs_train_dir):
     shutil.rmtree(logs_train_dir)
 # train, train_label = input_data.get_files(train_dir)
